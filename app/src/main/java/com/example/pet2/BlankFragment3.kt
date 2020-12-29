@@ -121,7 +121,7 @@ class ParamViewPagerAdapter internal constructor(@NonNull fm: FragmentManager) :
             1 -> "time"
             2 -> "wifiAuth"
             3 -> "lanSetting"
-            4 -> "mqttAuth"
+            4 -> "preset"
             else -> "хуй"
         }
     }

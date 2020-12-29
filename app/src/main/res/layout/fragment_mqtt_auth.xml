@@ -20,7 +20,7 @@
                 android:id="@+id/mqtt_login_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="login"
+                android:hint="preset_number"
                 app:endIconMode="clear_text"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:text="login"
                     tools:ignore="MissingConstraints" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,7 +40,8 @@
                 android:id="@+id/mqtt_password_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="password"
+                android:hint="preset_count"
+                android:visibility="visible"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:text="password"
                     tools:ignore="MissingConstraints" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

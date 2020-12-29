@@ -258,9 +258,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, CHECK_TOAST {
                                 }.build()
                             }
                             4 -> {
-                                this.mqttAuth = FitoParam.MQTTAuth.newBuilder().apply {
-                                    this.login = mqtt_login_text.text.toString()
-                                    this.password = mqtt_password_text.text.toString()
+                                this.preset = FitoParam.Preset.newBuilder().apply {
+                                    addConfigs(FitoParam.LampConfig.getDefaultInstance())
+                                    duration = 1
+                                    presetNumber =  mqtt_login_text.text.toString().toInt()
+                                    presetsCount = mqtt_password_text.text.toString().toInt()
                                 }.build()
                             }
                         }
