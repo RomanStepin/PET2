@@ -1,0 +1,19 @@
+// This is an example of how to handle 'union' style messages
+// with nanopb, without allocating memory for all the message types.
+//
+// There is no official type in Protocol Buffers for describing unions,
+// but they are commonly implemented by filling out exactly one of
+// several optional fields.
+
+syntax = "proto2";
+import "nanopb.proto";
+
+message Heartbeat {
+    required uint32 fw_version = 1;
+    enum PowerState {
+        ON = 0;
+        OFF = 1;
+    }
+    required PowerState setState = 2;
+    required string myString = 3 [(nanopb).max_size = 32];
+}
